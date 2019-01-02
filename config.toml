@@ -13,7 +13,7 @@ paginate = 10
 [params]
   # Shown in the home page
   subtitle = "Creating technical solutions in the spirit of DaVinci."
-  brand = "Craftedtech"
+  brand = "Blackburn"
   googleAnalytics = "Your Google Analytics tracking ID"
   disqus = "Your Disqus shortname"
   # CSS name for highlight.js
