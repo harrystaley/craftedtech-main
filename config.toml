@@ -1,4 +1,4 @@
-baseurl = "http://example.org/" # Make sure to end baseurl with a '/'
+baseurl = "https://craftedtech.net/" # Make sure to end baseurl with a '/'
 title = "Craftedtech - Creating technical solutions in the sprit of DaVinci"
 author = "Harry Staley"
 # Shown in the side menu
