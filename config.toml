@@ -1,6 +1,8 @@
 baseurl = "https://craftedtech.net/" # Make sure to end baseurl with a '/'
 title = "Craftedtech - Creating technical solutions in the sprit of DaVinci"
 author = "Harry Staley"
+languageCode = "en-us"
+theme = "blackburn"
 # Shown in the side menu
 copyright = "&copy; 2016. All rights reserved."
 canonifyurls = true
@@ -13,7 +15,7 @@ paginate = 10
 [params]
   # Shown in the home page
   subtitle = "Creating technical solutions in the spirit of DaVinci."
-  brand = "Blackburn"
+  brand = "Craftedtech"
   googleAnalytics = "Your Google Analytics tracking ID"
   disqus = "Your Disqus shortname"
   # CSS name for highlight.js
