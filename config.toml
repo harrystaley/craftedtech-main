@@ -1,5 +1,5 @@
 baseurl = "https://craftedtech.net/" # Make sure to end baseurl with a '/'
-title = "Craftedtech - Creating technical solutions in the sprit of DaVinci"
+title = "Craftedtech"
 author = "Harry Staley"
 languageCode = "en-us"
 theme = "blackburn"
@@ -14,7 +14,7 @@ paginate = 10
 
 [params]
   # Shown in the home page
-  subtitle = "Creating technical solutions in the spirit of DaVinci."
+  subtitle = "Software product development, full stack, dreaming big, and living small."
   brand = "Craftedtech"
   googleAnalytics = "Your Google Analytics tracking ID"
   disqus = "Your Disqus shortname"
@@ -24,8 +24,8 @@ paginate = 10
   dateFormat = "02 Jan 2006, 15:04"
   # Include any custom CSS and/or JS files
   # (relative to /static folder)
-  custom_css = ["css/my.css"]
-  custom_js = ["js/my.js"]
+  custom_css = ["css/custom.css"]
+  custom_js = ["js/custom.js"]
 
   [params.piwikAnalytics]
     siteid = 2
@@ -62,45 +62,45 @@ paginate = 10
   # by entering your username or ID.
 
   # SNS microblogging
-  twitter = "*"
-  gnusocial = "*" # Specify href (e.g. https://quitter.se/yourusername)
-  facebook = "*"
-  googleplus = "*"
-  weibo = "*"
-  tumblr = "*"
+  #twitter = "*"
+  #gnusocial = "*" # Specify href (e.g. https://quitter.se/yourusername)
+  #facebook = "*"
+  #googleplus = "*"
+  #weibo = "*"
+  #tumblr = "*"
 
   # SNS photo/video sharing
-  instagram = "*"
-  flickr = "*"
-  photo500px = "*"
-  pinterest = "*"
-  youtube = "*"
-  vimeo = "*"
-  vine = "*"
-  slideshare = "*"
+  #instagram = "*"
+  #flickr = "*"
+  #photo500px = "*"
+  #pinterest = "*"
+  #youtube = "*"
+  #vimeo = "*"
+  #vine = "*"
+  #slideshare = "*"
 
   # SNS career oriented
-  linkedin = "*"
-  xing = "*"
+  linkedin = "harrystaley"
+  #xing = "*"
 
   # SNS news
-  reddit = "*"
-  hackernews = "*"
+  reddit = "moagm316"
+  hackernews = "harry_staley"
 
   # Techie
-  github = "yoshiharuyamashita"
-  gitlab = "*"
-  bitbucket = "*"
-  stackoverflow = "*"
-  serverfault = "*"
+  github = "harrystaley"
+  gitlab = "harrystaley"
+  #bitbucket = "*"
+  #stackoverflow = "*"
+  #serverfault = "*"
 
   # Gaming
-  steam = "*"
-  mobygames = "*"
+  #steam = "*"
+  #mobygames = "*"
 
   # Music
-  lastfm = "*"
-  discogs = "*"
+  #lastfm = "*"
+  #discogs = "*"
 
   # Other
-  keybase = "*"
+  #keybase = "*"
