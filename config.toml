@@ -1,5 +1,5 @@
-baseurl = "https://craftedtech.net/" # Make sure to end baseurl with a '/'
-title = "Craftedtech - Creating technical solutions in the sprit of DaVinci"
+baseURL = "http://craftedtech.net/" # Make sure to end baseurl with a '/'
+title = "Craftedtechi"
 author = "Harry Staley"
 languageCode = "en-us"
 theme = "blackburn"
