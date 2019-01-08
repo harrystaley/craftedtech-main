@@ -3,6 +3,7 @@ title = "Craftedtech"
 author = "Harry Staley"
 languageCode = "en-us"
 theme = "blackburn"
+newContentEditor = "vim"
 # Shown in the side menu
 copyright = "&copy; 2016. All rights reserved."
 canonifyurls = true
