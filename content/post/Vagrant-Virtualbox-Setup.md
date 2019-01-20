@@ -4,6 +4,21 @@ date: 2019-01-19T11:35:51-06:00
 draft: false
 ---
 
+#What are VirtialBox and Vagrant and what can they do for me?
+
+##VirtualBox
+You can use VirtualBox to run an entire sandboxed operating system within your own computer.
+
+##Vagrant
+You can use Vagrant to manage a development environment. Through the command line, you can download, install, configure, and run any available OS, do your work inside of it, shut it down, rebuild it on the fly, and more.
+
+##The Dynamic Duo
+Through the use of VirtualBox and Vagrant, you can simulate the production environment of your production server. For example, if you’re using Digital Ocean or AWS to run a Virtual Private Server (VPS) in the cloud running your favorite stack (Ubuntu, Python, and MySQL) you can install local versions to have a duplicate enviorment, while keeping your own computer’s software untouched. Thus reducing the incidents of errors resulting from trying to develop code for a production server on an environment that does not match your local machine.
+
+This process can be used for several servers or projects that you are working on at the same time all while the work files are available to your local machine for editing.
+
+#Installation
+
 ##1. Install Git
 
 ###WINDOWS
@@ -62,6 +77,11 @@ vagrant init bento/ubuntu-18.04
 vagrant up
 {{< /highlight >}}
 
+NOTE:
+All files located in the same folder as your vagrant file will be available for use by the virtual machine in the ```/vagrant``` directory when you login.
+
+In our example files located in the ```my_new_vagrant_box``` directory will be available to the virtual machine as well.
+
 ##6. Connect to your new virtual machine.
 
 {{< highlight bash >}}
@@ -72,6 +92,12 @@ You will then presented with a command prompt such as below.
 {{< highlight bash >}}
 vagrant@vagrant:~$
 {{< /highlight >}}
+
+To view the files that are in the folder where you ```vagrantfile``` is located.
+{{< highlight bash >}}
+cd /vagrant
+{{< /highlight >}}
+
 Have fun with your new linux virtual machine.
 
    
