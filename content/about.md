@@ -1,5 +1,4 @@
 ---
-categories = ["misc"]
 title: "About"
 date: 2019-01-02T12:09:25Z
 draft: false
