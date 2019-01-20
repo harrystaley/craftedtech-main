@@ -2,7 +2,7 @@ baseurl = "https://craftedtech.net/" # Make sure to end baseurl with a '/'
 title = "Craftedtech"
 author = "Harry Staley"
 languageCode = "en-us"
-theme = "meghna-hugo"
+theme = "blackburn"
 newContentEditor = "vim"
 # Shown in the side menu
 copyright = "&copy; 2016. All rights reserved."

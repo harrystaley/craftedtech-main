@@ -1,7 +1,6 @@
 #! /bin/bash
-git pull
 sudo hugo
-sudo scp -r static/* /var/www/craftedtech.net/
+sudo scp -r public/* /var/www/craftedtech.net/
 sudo chown -R www-data:www-data /var/www/
-sudo rm -r static
+sudo rm -r public
 sudo systemctl restart nginx
