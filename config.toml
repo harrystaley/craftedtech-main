@@ -17,8 +17,8 @@ paginate = 10
   # Shown in the home page
   subtitle = "Software product development, full stack, dreaming big, and living small."
   brand = "Craftedtech"
-  googleAnalytics = "Your Google Analytics tracking ID"
-  disqus = "Your Disqus shortname"
+  googleAnalytics = "UA-132858600-1"
+  disqus = "craftedtech"
   # CSS name for highlight.js
   highlightjs = "androidstudio"
   highlightjs_extra_languages = ["yaml"]
