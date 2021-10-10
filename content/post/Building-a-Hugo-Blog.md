@@ -1,73 +1,29 @@
 ---
-title: "Building a Hugo Blog "
-date: 2019-01-10T09:06:29-06:00
+title: "AWK: the text data processing chainsaw"
+date: 2021-10-10T17:00:00-06:00
 draft: true
 ---
-##Overview
-This tutorial is written from the perspective that you are building a local blogging for push later to your server and give you the flexability to test locally and write your blog posts on the remote server as well if you prefer.
+## Overview
+This tutorial is written from the spective of processing lots of text data in a very quick fashion some ways that you could use this tool would be to parse log files or command output. I have used AWK to quicly parse and summarize logs that contain very small numbers of records to thousands of records. The great thing about awk is that it is included out of the box in most Unix based operating systems such as Linux, GNU, and Mac OSX.
 
 ### Required Technologies
-1. Homebrew
-2. Git
-3. NGINX
-4. HUGO
-5. Let's Encrypt
+1. Unix based operating system such as Linux, GNU, or even Mac OSX.
+2. Shell such as BASH, ZSH, etc.
+3. VIM, or your favorite programmers text editor.
 
 ### Steps
-1. Install HUGO Locally (OSX) 
-2. Install and setup Git Locally
-3. Server Setup
-	a. Firewall Settings
-	b. Setup HUGO
-	c. Setup NGINX
+1. ensure that AWK is installed on your operating system.
+```zsh
+awk --version
+```
+If you have awk installed in your terminal it should pull back something like:
+```zsh
+awk version 20200816
+```
 
-## 1. Install Hugo Locally (OSX)
-You are installing HUGO locally so that you can write your blog posts locally as well as test your site using the local hugo web server.
-
-### Install Homebrew
-
-{{< higthlight bash >}}
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-{{< /highlight >}}
-
-### Install HUGO
-
-{{< highlight bash >}}
-brew install hugo
-{{< /highlight >}}
-
-At this point everything should be set up for hugo in your path.
-
-Next lets test it in your terminal.
-{{< highlight bash >}}
-hugo version
-{{< /highlight >}}
-
-you should see something simmilar to below.
-{{< highlight bash >}}
-Hugo Static Site Generator v0.53/extended darwin/amd64 BuildDate: unknown
-{{< /highlight>}}
-
-Ok now that you have HUGO installed locally we can start setting thigns up locally.
-
-Next we are going to set up our basic page and settings.
-
-
-## 2. Git Setup
-
-
-## 3. Server Setup
-
-### a. Firewall Settings
-
-### b. Setup HUGO
-
-### c. setup NGINX
 
 ## References
 
 [Homebrew Website](https://brew.sh/ "Homebrew Website")
 
-[HUGO Website - Installation](https://gohugo.io/getting-started/installing/ "Hugo Website - Installation")
-
-[Digital Ocean HUGO Tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-hugo-a-static-site-generator-on-ubuntu-14-04 "Digital Ocean Hugo Tutorial")
+[GNU Awk Users Guide](https://www.gnu.org/software/gawk/manual/gawk.html#Regexp "GNU Awk Users Guide")
