@@ -71,8 +71,14 @@ That being said there are three code blocks that make up Awk with two of which a
 
 Having learned all of that lets kick the tires a bit in the next section.
 
-## Awk Quick Start.
+## Syntax
+AWK can be executed directly from the terminal or form of a text file containing AWK commands.
 
+### Terminal Execution
+Awk can be executed from the terminal directly isng the below example.
+```
+awk [options] 'Begin-Body-End-blocks' target_input_stream ...
+```
 1. Create a file titled 'myfile.txt' using the touch command as seen below.
 ```shell
 touch myfile.txt
@@ -99,19 +105,41 @@ Line 4
 ```
 As you can see from our example the Begin block (BEGIN{printf "---Begin Block---"}) executes, the Body block executes ({print}) printing each line in the file, and finally the End block executes (END{printf "---End Block---"}).
 
-## Syntax
-AWK can be executed directly from the terminal or form of a text file containing AWK commands.
-
-### Terminal Execution
-Our example in the quick start section above uses the below method.
-```
-awk [options] 'Begin-Body-End-blocks' target_input_stream ...
-```
-
 ### Text File Execution
 In order to use a text file we replace ```'Begin-Body-End-blocks'``` with ```-f scrpt_file``` such as below.
 ```
 awk [options] -f scrpt_file target_input_stream ...
+```
+To test this let's expand on what we have created for the terminal example a bit. 
+
+1. Create a file titled 'scriptfile.awk' using the touch command as seen below.
+```shell
+touch scriptfile.awk
+```
+2. Now lets open scriptfile.awk in our favorite text editor such as VIM and copy the following text into the file saving it.
+```shell
+BEGIN{
+  printf "---Begin Block---"
+}
+{
+  print
+}
+END{
+  printf "---End Block---"
+}
+```
+3. Lets execute our first awk command on our file.
+```shell
+awk -f scriptfile.awk myfile.txt
+```
+This produces the following output:
+```shell
+---Begin Block---
+Line 1
+Line 2
+Line 3
+Line 4
+---End Block---
 ```
 
 ## Options
