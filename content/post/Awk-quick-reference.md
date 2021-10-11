@@ -47,6 +47,16 @@ Remember where this was installed because we are going to use this later when we
 
 ## Anatomy of Awk and it's workflow.
 
+The general workflow of awk is to "Until EOF Read, Execute, Repeat".
+
+That being said there are three blocks that make up Awk with two blocks being optional as seen in the table below.
+
+|Optional/Required|Block|Execution|
+|--------|-----------|---------|
+|Optional|BEGIN {Awk do stuff}|Executed once|
+|Required|/pattern/ {Awk do stuff}|Executed on each line until End of File (EOF)|
+|Optional|END {Awk Awk do stuff}|executed once|
+
 
 
 ## References
