@@ -414,6 +414,17 @@ Line3c2
 Line4c2
 ```
 
+## Regular Expressions a.k.a. REGEX
+
+AWK powerfully and effectively handles regular expressions. Numerous problems can be solved with simple regular expressions.  As this article does not cover regular expressions themselves please see the reference section of this blog post. That being said I will gladly provide several examples.
+
+
+For more on regular experssions please see the following sites that I have found helpful.
+
+[Rexegg - Regex quick Start guide](https://www.rexegg.com/regex-quickstart.html "Rexegg - Regex quick start guide")
+
+[Regex 101 - BUild Test and Debug Regualr Experssions](https://regex101.com/ "Regex 101 - Build Test and Debug Regular Expressions")
+
 
 
 ## References
@@ -425,3 +436,7 @@ Line4c2
 [Linuxize Enviornmental variables](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/ "Linuxize - Enviornmental Variables")
 
 [Geeks for Geeks - Enviornmental Variables](https://www.geeksforgeeks.org/environment-variables-in-linux-unix/ "Geeks for Geeks - Enviornmental Variables")
+
+[Regex 101 - BUild Test and Debug Regualr Experssions](https://regex101.com/ "Regex 101 - Build Test and Debug Regular Expressions")
+
+[Rexegg - Regex quick Start guide](https://www.rexegg.com/regex-quickstart.html "Rexegg - Regex quick start guide")
