@@ -45,7 +45,7 @@ You should see something simmilar to the below as a result of the above command:
 ```
 Remember where this was installed because we are going to use this later when we create our awk file.
 
-## Anatomy of Awk c
+## Anatomy of Awk
 
 
 
