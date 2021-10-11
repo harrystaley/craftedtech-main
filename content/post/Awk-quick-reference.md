@@ -89,10 +89,10 @@ Output:
 A file named myfile.txt is created in the cureent directory.
 2. Now lets open myfile.txt in our favorite text editor such as VIM and copy the following text into the file saving it.
 ```bash
-Line 1
-Line 2
-Line 3
-Line 4
+Line1c1 Line1c2
+Line2c1 Line2c2
+Line3c1 Line3c2
+Line4c1 Line4c2
 ```
 3. Lets execute our first awk command on our file.
 Input:
@@ -102,10 +102,10 @@ awk 'BEGIN{printf "---Begin Block---"} {print} END{printf "---End Block---"}' my
 Output:
 ```bash
 ---Begin Block---
-Line 1
-Line 2
-Line 3
-Line 4
+Line1c1 Line1c2
+Line2c1 Line2c2
+Line3c1 Line3c2
+Line4c1 Line4c2
 ---End Block---
 ```
 As you can see from our example the Begin block (BEGIN{printf "---Begin Block---"}) executes, the Body block executes ({print}) printing each line in the file, and finally the End block executes (END{printf "---End Block---"}).
@@ -145,10 +145,10 @@ awk -f scriptfile.awk myfile.txt
 Output:
 ```bash
 ---Begin Block---
-Line 1
-Line 2
-Line 3
-Line 4
+Line1c1 Line1c2
+Line2c1 Line2c2
+Line3c1 Line3c2
+Line4c1 Line4c2
 ---End Block---
 ```
 ### Options
@@ -208,229 +208,220 @@ ARGV[4] = arg4
 CONVFMT stores the conversion format for numbers. By default its' value is %.6g.
 
 Input:
-```
+```bash
 awk 'BEGIN { print "Number Conversion Format =", CONVFMT }'
 ```
 Output:
-```
+```bash
 Number Conversion Format = %.6g
 ```
 ### ENVIRON
 ENVIRON is an associative array for environmental variables.
 Input:
-```
+```bash
 awk 'BEGIN { print ENVIRON["USER"] }'
 ```
 Output:
-```
+```bash
 someuser
 ```
-To find other environment variables, use ```env``` command or see the references section at the bottom of this article.
+To find other environment variables, use ```env``` command. To learn more about enviornmental variables see [Linuxize Enviornmental variables](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/ "Linuxize - Enviornmental Variables").
 
+### FILENAME
 
-FILENAME
+FILENAME stores the current file name.
 
-It represents the current file name.
+Input:
+```bash
+awk 'END {print FILENAME}' myfile.txt
+```
+Output:
+```bash
+myfile.txt
+```
+NOTE: FILENAME is an undefined variable in the BEGIN block.
 
-Example
+### FS
 
-[jerry]$ awk 'END {print FILENAME}' marks.txt
+FS represents the (input) field delineator. The default value is a space " ". You may also change this by using -F terminal option.
 
-On executing this code, you get the following result −
-
-Output
-
-marks.txt
-
-Please note that FILENAME is undefined in the BEGIN block.
-FS
-
-It represents the (input) field separator and its default value is space. You can also change this by using -F command line option.
-
-Example
-
-[jerry]$ awk 'BEGIN {print "FS = " FS}' | cat -vte
-
-On executing this code, you get the following result −
-
-Output
-
+Input:
+```bash
+awk 'BEGIN {print "FS = " FS}' | cat -vte
+```
+Output:
+```bash
 FS =  $
+```
+### NF
+NF stores the number of fields in the current record.
 
-NF
+For example, the below prints only lines containing more than three fields.
 
-It represents the number of fields in the current record. For instance, the following example prints only those lines that contain more than two fields.
+Input:
+```bash
+echo -e "field1 field2\nfield1 field2 field3\nfield1 field2 field3 field4" | awk 'NF > 3'
+```
+Output:
+```bash
+field1 field2 field3 field4
+```
+### NR
 
-Example
+NR stores the number of the current record.
 
-[jerry]$ echo -e "One Two\nOne Two Three\nOne Two Three Four" | awk 'NF > 2'
+For instance, the below prints the record if the current record number is less than 4.
 
-On executing this code, you get the following result −
+Input:
+```bash
+echo -e "One\nTwo\nThree\nFour" | awk 'NR < 4'
+```
+Output:
+```bash
+One
+Two
+Three
+```
+### FNR
+FNR is simmilar to NR, but is relative to the current input stream.
 
-Output
+This is particularly useful when Awk is working with multiple input streams as such the value of FNR resets with each new input stream.
 
-One Two Three
-One Two Three Four
+### OFMT
+OFMT stores the output format number. The default value is %.6g.
 
-NR
-
-It represents the number of the current record. For instance, the following example prints the record if the current record number is less than three.
-
-Example
-
-[jerry]$ echo -e "One Two\nOne Two Three\nOne Two Three Four" | awk 'NR < 3'
-
-On executing this code, you get the following result −
-
-Output
-
-One Two
-One Two Three
-
-FNR
-
-It is similar to NR, but relative to the current file. It is useful when AWK is operating on multiple files. Value of FNR resets with new file.
-OFMT
-
-It represents the output format number and its default value is %.6g.
-
-Example
-
-[jerry]$ awk 'BEGIN {print "OFMT = " OFMT}'
-
-On executing this code, you get the following result −
-
-Output
-
+Input:
+```bash
+awk 'BEGIN {print "OFMT = " OFMT}'
+```
+Output:
+```bash
 OFMT = %.6g
+```
+### OFS
 
-OFS
+OFS stores the output field separator. Its default value is space " ".
 
-It represents the output field separator and its default value is space.
-
-Example
-
-[jerry]$ awk 'BEGIN {print "OFS = " OFS}' | cat -vte
-
-On executing this code, you get the following result −
-
-Output
-
+Input:
+```bash
+awk 'BEGIN {print "OFS = " OFS}' | cat -vte
+```
+Output:
+```bash
 OFS =  $
+```
+### ORS
 
-ORS
+ORS stores the output record delineator. Its default value is newline "\n".
 
-It represents the output record separator and its default value is newline.
-
-Example
-
-[jerry]$ awk 'BEGIN {print "ORS = " ORS}' | cat -vte
-
-On executing the above code, you get the following result −
-
-Output
-
+Input:
+```bash
+awk 'BEGIN {print "ORS = " ORS}' | cat -vte
+```
+Output:
+```bash
 ORS = $
 $
+```
+### RLENGTH
 
-RLENGTH
+RLENGTH stores the string length matched by the match function.
 
-It represents the length of the string matched by match function. AWK's match function searches for a given string in the input-string.
+AWK's match function searches for a given string in the input-string.
 
-Example
-
-[jerry]$ awk 'BEGIN { if (match("One Two Three", "re")) { print RLENGTH } }'
-
-On executing this code, you get the following result −
-
-Output
-
+Input:
+```bash
+awk 'BEGIN{ if (match("One Two Three", "re")) { print RLENGTH } }'
+```
+Output:
+```bash
 2
+```
+### RS
 
-RS
+RS stoes (input) record separator.
+Its default value is newline "\n".
 
-It represents (input) record separator and its default value is newline.
-
-Example
-
-[jerry]$ awk 'BEGIN {print "RS = " RS}' | cat -vte
-
-On executing this code, you get the following result −
-
-Output
-
+Input:
+```bash
+awk 'BEGIN {print "RS = " RS}' | cat -vte
+```
+Output:
+```bash
 RS = $
 $
+```
 
-RSTART
+### RSTART
 
-It represents the first position in the string matched by match function.
+RSTART stores the first position in the string matched by match function.
 
-Example
+Input:
+```bash
+awk 'BEGIN { if (match("The quick brown fox", "bro")) { print RSTART } }'
+```
 
-[jerry]$ awk 'BEGIN { if (match("One Two Three", "Thre")) { print RSTART } }'
+Output:
+```bash
+11
+```
+### SUBSEP
 
-On executing this code, you get the following result −
+SUBSEP stores the separator character for array subscripts.
+The default value is \034.
 
-Output
+Input:
+```bash
+awk 'BEGIN { print "SUBSEP = " SUBSEP }' | cat -vte
+```
 
-9
-
-SUBSEP
-
-It represents the separator character for array subscripts and its default value is \034.
-
-Example
-
-[jerry]$ awk 'BEGIN { print "SUBSEP = " SUBSEP }' | cat -vte
-
-On executing this code, you get the following result −
-
-Output
-
+Output:
+```bash
 SUBSEP = ^\$
+```
 
-$0
+### $0
 
-It represents the entire input record.
+$0 stores the entire input record.
 
-Example
+Input:
+```bash
+awk '{print $0}' myfile.txt
+```
+Output:
+```bash
+Line1c1 Line1c2
+Line2c1 Line2c2
+Line3c1 Line3c2
+Line4c1 Line4c2
+```
 
-[jerry]$ awk '{print $0}' marks.txt
+### $n
 
-On executing this code, you get the following result −
+$n stores the nth field in the current line separated by FS.
 
-Output
+For example if I wanted to print the second field of myfile.txt.
 
-1) Amit     Physics   80
-2) Rahul    Maths     90
-3) Shyam    Biology   87
-4) Kedar    English   85
-5) Hari     History   89
-
-$n
-
-It represents the nth field in the current record where the fields are separated by FS.
-
-Example
-
-[jerry]$ awk '{print $3 "\t" $4}' marks.txt
-
-On executing this code, you get the following result −
-
-Output
-
-Physics   80
-Maths     90
-Biology   87
-English   85
-History   89
+Input:
+```
+awk '{print $2}' myfile.txt
+```
+Output:
+```
+Line1c2
+Line2c2
+Line3c2
+Line4c2
+```
 
 
 
 ## References
 
 [Homebrew Website](https://brew.sh/ "Homebrew Website")
+
 [GNU Awk Users Guide](https://www.gnu.org/software/gawk/manual/gawk.html#Regexp "GNU Awk Users Guide")
+
 [Linuxize Enviornmental variables](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/ "Linuxize - Enviornmental Variables")
+
 [Geeks for Geeks - Enviornmental Variables](https://www.geeksforgeeks.org/environment-variables-in-linux-unix/ "Geeks for Geeks - Enviornmental Variables")
