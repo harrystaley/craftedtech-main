@@ -40,10 +40,11 @@ RPM based GNU/Linux, use Yellowdog Updator Modifier [yum]:
 yum install gawk
 ```
 Check where Awk is installed and that it is accessible to your terminal:
+Input:
 ```
 which awk
 ```
-You should see something simmilar to the below as a result of the above command:
+Output:
 ```
 /usr/bin/awk
 ```
@@ -66,7 +67,7 @@ That being said there are three code blocks that make up Awk with two of which a
 |Block Name|Optional/Required|Syntax|Execution|
 |---------|--------|-----------|---------|
 |Begin|Optional|BEGIN {Awk do stuff}|Executed at the beginning of the program once|
-|Body|Required|/pattern/ {Awk do stuff}|Executed on each line until End of File (EOF)|
+|Body|Optional|/pattern/ {Awk do stuff}|Executed on each line until End of File (EOF)|
 |End|Optional|END {Awk Awk do stuff}|Executed at the end of the program once|
 
 Having learned all of that lets kick the tires a bit in the next section.
@@ -80,9 +81,12 @@ Awk can be executed from the terminal directly isng the below example.
 awk [options] 'Begin-Body-End-blocks' target_input_stream ...
 ```
 1. Create a file titled 'myfile.txt' using the touch command as seen below.
+Input:
 ```shell
 touch myfile.txt
 ```
+Output:
+A file named myfile.txt is created in the cureent directory.
 2. Now lets open myfile.txt in our favorite text editor such as VIM and copy the following text into the file saving it.
 ```shell
 Line 1
@@ -91,10 +95,11 @@ Line 3
 Line 4
 ```
 3. Lets execute our first awk command on our file.
+Input:
 ```shell
 awk 'BEGIN{printf "---Begin Block---"} {print} END{printf "---End Block---"}' myfile.txt
 ```
-This produces the following output:
+Output:
 ```shell
 ---Begin Block---
 Line 1
@@ -113,9 +118,13 @@ awk [options] -f scrpt_file target_input_stream ...
 To test this let's expand on what we have created for the terminal example a bit. 
 
 1. Create a file titled 'scriptfile.awk' using the touch command as seen below.
+Input:
 ```shell
 touch scriptfile.awk
 ```
+Output:
+A file named scriptfile.awk is created in the current directory.
+
 2. Now lets open scriptfile.awk in our favorite text editor such as VIM and copy the following text into the file saving it.
 ```shell
 BEGIN{
@@ -129,10 +138,11 @@ END{
 }
 ```
 3. Lets execute our first awk command on our file.
+Input:
 ```shell
 awk -f scriptfile.awk myfile.txt
 ```
-This produces the following output:
+Output:
 ```shell
 ---Begin Block---
 Line 1
@@ -141,8 +151,25 @@ Line 3
 Line 4
 ---End Block---
 ```
+### Options
+Awk comes with options that can be very helpful in our text mining journey here are just a few. To get a full list of options reference the man page for Awk, use the --help ooption, or check out the references at the bottom of this blog post.
 
-## Options
+#### -v
+
+The -v option assigns a value to a variable. It assigns varialbe values before program execution.
+
+Input:
+```
+awk -v fname=Harry 'BEGIN{printf "Good morning %s!\n", fname}'
+```
+Output:
+```
+Good morning Harry!
+```
+If you notice this still works because no matter what the Begin block is always executed at the beginning of hte program regardless of the existance of the other blocks.
+
+
+
 
 
 
