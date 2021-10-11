@@ -65,6 +65,40 @@ That being said there are three code blocks that make up Awk with two of which a
 |Body|Required|/pattern/ {Awk do stuff}|Executed on each line until End of File (EOF)|
 |End|Optional|END {Awk Awk do stuff}|Executed at the end of the program once|
 
+Having learned all of that lets kick the tires a bit in the next section.
+
+## Awk Quick Start.
+
+1. Create a file titled 'myfile.txt' using the touch command as seen below.
+```shell
+touch myfile.txt
+```
+2. Now lets open myfile.txt in our favorite text editor such as VIM and copy the following text into the file saving it.
+```shell
+Line 1
+Line 2
+Line 3
+Line 4
+```
+3. Lets execute our first awk command on our file.
+```shell
+awk 'BEGIN{printf "---Begin Block---"} {print} END{printf "---End Block---"}' myfile.txt
+```
+This produces the following output:
+```shell
+---Begin Block---
+Line 1
+Line 2
+Line 3
+Line 4
+---End Block---
+```
+
+As you can see from our example the Begin block (BEGIN{printf "---Begin Block---"}) executes, the Body block executes ({print}) printing each line in the file, and finally the End block executes (END{printf "---End Block---"}).
+
+## Syntax and Options
+
+
 
 ## References
 
