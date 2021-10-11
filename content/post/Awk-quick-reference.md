@@ -45,18 +45,25 @@ You should see something simmilar to the below as a result of the above command:
 ```
 Remember where this was installed because we are going to use this later when we create our awk file.
 
-## Anatomy of Awk and it's workflow.
+## Anatomy of a chainsaw: Awk and it's workflow.
 
-The general workflow of awk is to "Until EOF Read, Execute, Repeat".
+The general workflow of awk is to "Until End Of File Read, Execute, Repeat".
+Thus AWK reads a line from the input stream (file, pipe, or stdin), stores it in memory and then executes commands on that line. 
+This process of reading and execution continues until the end of the input stream a.k.a EOF. Once completed Awk sends the results to the output stream (file, pipe, or stdout). 
 
-That being said there are three blocks that make up Awk with two blocks being optional as seen in the table below.
+Here is an example of how to run Awk on myfile.txt
+```zsh
+awk 'blocks-go-here' myfile.txt
+```
+As such blocks-go-here will be executed on each line of myfile.txt
 
-|Optional/Required|Block|Execution|
-|--------|-----------|---------|
-|Optional|BEGIN {Awk do stuff}|Executed once|
-|Required|/pattern/ {Awk do stuff}|Executed on each line until End of File (EOF)|
-|Optional|END {Awk Awk do stuff}|executed once|
+That being said there are three code blocks that make up Awk with two of which are optional as seen in the table below.
 
+|Block Name|Optional/Required|Syntax|Execution|
+|---------|--------|-----------|---------|
+|Begin|Optional|BEGIN {Awk do stuff}|Executed at the beginning of the program once|
+|Body|Required|/pattern/ {Awk do stuff}|Executed on each line until End of File (EOF)|
+|End|Optional|END {Awk Awk do stuff}|Executed at the end of the program once|
 
 
 ## References
