@@ -11,8 +11,8 @@ This tutorial is written from the spective of processing lots of text data in a 
 2. Shell such as BASH, ZSH, etc.
 3. VIM, or your favorite programmers text editor.
 
-### Steps
-1. ensure that AWK is installed on your operating system.
+### Initial setup
+Ensure that AWK is installed on your operating system.
 ```zsh
 awk --version
 ```
@@ -20,6 +20,33 @@ If you have awk installed in your terminal it should pull back something like:
 ```zsh
 awk version 20200816
 ```
+If you do not have awk installed or you get an error install it using your favorite package manager as seen below:
+
+Mac OSX Homebrew:
+```bash
+brew install awk
+```
+Debian based GNU/Linux using Advance Package Tool (APT):
+```
+sudo apt-get update
+sudo apt-get install gawk
+```
+RPM based GNU/Linux, use Yellowdog Updator Modifier [yum]:
+```
+yum install gawk
+```
+Check where awk is installed and that it is accessible to your terminal:
+```
+which awk
+```
+You should see something simmilar to the below as a result of the above command:
+```
+/usr/bin/awk
+```
+Remember where this was installed because we are going to use this later when we create our awk file.
+
+## Anatomy of Awk c
+
 
 
 ## References
