@@ -382,7 +382,7 @@ SUBSEP = ^\$
 
 ### $0
 
-$0 stores the entire input record.
+$0 stores the entire input stream.
 
 Input:
 ```bash
@@ -398,7 +398,7 @@ Line4c1 Line4c2
 
 ### $n
 
-$n stores the nth field in the current line separated by FS.
+$n stores the nth field of the input stream which is delineated by FS.
 
 For example if I wanted to print the second field of myfile.txt.
 
@@ -416,8 +416,53 @@ Line4c2
 
 ## Regular Expressions a.k.a. REGEX
 
-AWK powerfully and effectively handles regular expressions. Numerous problems can be solved with simple regular expressions.  As this article does not cover regular expressions themselves please see the reference section of this blog post. That being said I will gladly provide several examples.
+AWK powerfully and effectively handles regular expressions. Numerous problems can be solved with simple regular expressions.  As this article does not cover regular expressions themselves please see the reference section of this blog post. That being said see below some of the implementations of regex in Awk.
 
+Method 1:
+Execute a body block on a line only if something in the line matches the pattern.
+
+awk '/some-regex/ {do-awk-stuff}' target_input_stream
+
+Input:
+```
+ awk '/e2/ {print}' myfile.txt
+ ```
+Output:
+```
+Line2c1 Line2c2
+```
+
+Method 2:
+Your regular expression can also be used in a conditional argument as seen below.
+
+In this case it can either take the form of ```~``` is Like or ```!~``` is Not like.
+
+```
+awk '{if ($n ~ /some-regex/) {do-awk-stuff}}' target_input_stream
+```
+or
+
+```
+awk '{if ($n !~ /some-regex/) {do-awk-stuff}}' target_input_stream
+```
+Here is another way to write our first regex example.
+Input:
+```
+ awk '{if ($0 ~ /e2/) {print}}' myfile.txt
+ ```
+Output:
+```
+Line2c1 Line2c2
+```
+If I wanted to search in the second column and return data from the second column.
+Input:
+```
+ awk '{if ($2 ~ /e2/) {print $2}}' myfile.txt
+```
+Output:
+```
+Line2c2
+```
 
 For more on regular experssions please see the following sites that I have found helpful.
 
