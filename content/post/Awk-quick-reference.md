@@ -1,7 +1,7 @@
 ---
 title: "AWK: the text data processing chainsaw"
 date: 2021-10-10T17:00:00-06:00
-draft: true
+draft: false
 ---
 
 ## Overview
