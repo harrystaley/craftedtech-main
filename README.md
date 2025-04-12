@@ -1,37 +1,52 @@
-## Welcome to GitHub Pages
+# CraftedTech-Main
 
-You can use the [editor on GitHub](https://github.com/harrystaley/craftedtech-main/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Project Overview
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Welcome to the `craftedtech-main` repository. This project is designed to manage and preview content using GitHub Pages and Jekyll. It offers resources and guidance for styling content with Markdown, allowing for easy customization and formatting of web pages. The main topics covered in this repository are GitHub and Markdown.
 
-### Markdown
+## Setup and Installation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+To get started with this project, follow the steps below:
+
+1. Clone this repository to your local machine using `https://github.com/your_username/craftedtech-main.git`
+2. Ensure you have [Ruby](https://www.ruby-lang.org/en/downloads/) installed, as Jekyll requires the Ruby language.
+3. Install Jekyll and bundler gems using the command `gem install jekyll bundler`
+4. Change into your new directory `cd craftedtech-main`
+5. Build the site and make it available on a local server using `bundle exec jekyll serve`
+6. Browse to `http://localhost:4000`
+
+## Usage Examples
+
+Once you have your local copy and Jekyll running, you can start editing the markdown files. Here's an example of how you can use Markdown:
 
 ```markdown
-Syntax highlighted code block
+# This is a Heading
+## This is a sub-heading
 
-# Header 1
-## Header 2
-### Header 3
+Here is some normal text. A paragraph, if you will.
 
-- Bulleted
-- List
+* This is a bullet point
+* So is this - isn't it cool?
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+[This is a link](http://www.example.com)
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+## Contribution Guidelines
 
-### Jekyll Themes
+Contributions to this project are always welcome. To contribute:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/harrystaley/craftedtech-main/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+1. Fork the project.
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request.
 
-### Support or Contact
+Please ensure your pull request adheres to the following guidelines:
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- Write clear, descriptive commit messages.
+- Make sure your changes do not break any existing functionality.
+- Update the README with details of changes where necessary.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
