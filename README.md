@@ -1,68 +1,73 @@
 ```markdown
-# CraftedTech Main
+# CraftedTech-Main
 
-Welcome to **CraftedTech Main**, a versatile repository designed to manage web content seamlessly using GitHub Pages and Jekyll. This project offers robust support for Markdown styling, customizable layouts, and a variety of frontend resources, making it an ideal solution for developers and designers looking to create and manage web content efficiently.
+A versatile repository for managing web content using GitHub Pages and Jekyll. CraftedTech-Main is designed to simplify the process of creating and styling web pages with Markdown, offering customizable layouts and a suite of frontend resources.
+
+## Project Overview
+
+CraftedTech-Main empowers users to build and manage web content efficiently. By leveraging the power of GitHub Pages and Jekyll, this repository allows for easy content styling using Markdown, supports customizable layouts, and provides essential frontend resources to enhance web design and user experience.
 
 ## Features
 
-- **Markdown Styling**: Effortlessly integrate and style Markdown content.
-- **Customizable Layouts**: Tailor your web pages with customizable Jekyll layouts.
-- **Frontend Resources**: Access a variety of CSS and design resources to enhance UI/UX.
-- **Version Control**: Utilize Git for efficient version control and collaboration.
-- **Multi-language Support**: Includes scripts and components in Bash, C, CSS, and R.
+- **Markdown Styling:** Seamlessly style web content using Markdown syntax.
+- **Customizable Layouts:** Easily modify and adapt layouts to fit your needs.
+- **Frontend Resources:** Access a range of CSS and design tools.
+- **Version Control:** Manage your web content with Git and GitHub.
+- **Cross-Platform Support:** Compatible with various operating systems.
 
 ## Setup and Installation
 
-To get started with CraftedTech Main, follow these steps:
+To set up CraftedTech-Main locally, follow these steps:
 
-1. **Clone the Repository**:
+1. **Clone the Repository:**
    ```bash
    git clone https://github.com/yourusername/craftedtech-main.git
-   ```
-
-2. **Navigate to the Project Directory**:
-   ```bash
    cd craftedtech-main
    ```
 
-3. **Install Jekyll and Bundler**:
-   Ensure you have [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installed, then run:
-   ```bash
-   gem install jekyll bundler
-   ```
-
-4. **Install Dependencies**:
+2. **Install Jekyll and Dependencies:**
+   Ensure you have Ruby and Bundler installed, then run:
    ```bash
    bundle install
    ```
 
-5. **Serve the Site Locally**:
+3. **Serve the Site Locally:**
+   Use the following command to start a local server:
    ```bash
    bundle exec jekyll serve
    ```
-   Visit `http://localhost:4000` to view your site.
 
-## Usage
+4. **View Your Site:**
+   Open your browser and navigate to `http://localhost:4000` to see your site in action.
 
-- **Creating a New Post**: Add Markdown files in the `_posts` directory following the naming convention `YYYY-MM-DD-title.md`.
-- **Customizing Layouts**: Modify or add new layouts in the `_layouts` directory to change the structure of your web pages.
-- **Styling with CSS**: Update or create new styles in the `assets/css` directory to change the appearance of your site.
+## Usage Examples
+
+- **Creating a New Page:**
+  Add a new Markdown file in the `_posts` directory with the following format:
+  ```markdown
+  ---
+  layout: post
+  title: "Your Page Title"
+  date: YYYY-MM-DD
+  ---
+  Your content goes here.
+  ```
+
+- **Customizing Layouts:**
+  Modify the files in the `_layouts` directory to change the overall structure of your pages.
 
 ## Contribution Guidelines
 
-We welcome contributions from the community. To contribute:
+We welcome contributions to CraftedTech-Main! To contribute:
 
 1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch-name`).
-3. Make your changes and commit them (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch-name`).
-5. Open a pull request with a detailed description of your changes.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes and push the branch to your fork.
+4. Open a pull request with a detailed description of your changes.
+
+Please adhere to the coding standards and provide clear commit messages.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-Thank you for using CraftedTech Main! If you have any questions or need further assistance, feel free to open an issue or contact the maintainers.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 ```
