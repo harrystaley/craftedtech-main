@@ -1,60 +1,53 @@
 ```markdown
 # CraftedTech-Main
 
-A versatile repository for managing web content using GitHub Pages and Jekyll. CraftedTech-Main is designed to simplify the process of creating and styling web pages with Markdown, offering customizable layouts and a suite of frontend resources.
+Welcome to **CraftedTech-Main**, a versatile repository designed to streamline the process of creating and styling web pages using GitHub Pages, Jekyll, and Markdown. This project provides customizable layouts and essential frontend tools to enhance your web development workflow.
 
 ## Project Overview
 
-CraftedTech-Main empowers users to build and manage web content efficiently. By leveraging the power of GitHub Pages and Jekyll, this repository allows for easy content styling using Markdown, supports customizable layouts, and provides essential frontend resources to enhance web design and user experience.
+CraftedTech-Main is built to facilitate the creation of aesthetically pleasing and functional web pages. By leveraging the power of GitHub Pages, Jekyll, and Markdown, this repository enables developers and designers to efficiently produce and maintain web content with ease. Whether you're building a personal blog, a project site, or a portfolio, CraftedTech-Main has the tools you need.
 
 ## Features
 
-- **Markdown Styling:** Seamlessly style web content using Markdown syntax.
-- **Customizable Layouts:** Easily modify and adapt layouts to fit your needs.
-- **Frontend Resources:** Access a range of CSS and design tools.
-- **Version Control:** Manage your web content with Git and GitHub.
-- **Cross-Platform Support:** Compatible with various operating systems.
+- **Customizable Layouts:** Tailor your web page designs with flexible layout options.
+- **Frontend Tools:** Utilize CSS and other styling tools to enhance UI/UX.
+- **Markdown Support:** Seamlessly integrate Markdown for content creation.
+- **Version Control with Git:** Keep track of changes and collaborate effectively.
+- **Multi-language Support:** Write and style code in languages like Bash, C, R, and Go.
 
 ## Setup and Installation
 
-To set up CraftedTech-Main locally, follow these steps:
+To get started with CraftedTech-Main, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/craftedtech-main.git
+   git clone https://github.com/your-username/craftedtech-main.git
    cd craftedtech-main
    ```
 
-2. **Install Jekyll and Dependencies:**
+2. **Install Jekyll and Bundler:**
    Ensure you have Ruby and Bundler installed, then run:
    ```bash
-   bundle install
+   gem install jekyll bundler
    ```
 
-3. **Serve the Site Locally:**
-   Use the following command to start a local server:
+3. **Build the Site:**
+   Navigate to the project directory and build your site:
    ```bash
+   bundle install
    bundle exec jekyll serve
    ```
 
 4. **View Your Site:**
-   Open your browser and navigate to `http://localhost:4000` to see your site in action.
+   Open your browser and go to `http://localhost:4000` to see your site in action.
 
 ## Usage Examples
 
 - **Creating a New Page:**
-  Add a new Markdown file in the `_posts` directory with the following format:
-  ```markdown
-  ---
-  layout: post
-  title: "Your Page Title"
-  date: YYYY-MM-DD
-  ---
-  Your content goes here.
-  ```
+  Add a new Markdown file in the `_pages` directory and include the necessary front matter.
 
-- **Customizing Layouts:**
-  Modify the files in the `_layouts` directory to change the overall structure of your pages.
+- **Styling with CSS:**
+  Customize your styles by editing the `.scss` files in the `assets/css` directory.
 
 ## Contribution Guidelines
 
@@ -62,12 +55,12 @@ We welcome contributions to CraftedTech-Main! To contribute:
 
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix.
-3. Commit your changes and push the branch to your fork.
-4. Open a pull request with a detailed description of your changes.
+3. Commit your changes with clear and concise messages.
+4. Push your branch and open a Pull Request.
 
-Please adhere to the coding standards and provide clear commit messages.
+Please ensure your code adheres to the project's coding standards and includes relevant tests or documentation.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+CraftedTech-Main is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 ```
